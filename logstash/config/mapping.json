@@ -1,5 +1,5 @@
 {
-  "template": "cloudfront-logs-*",
+  "template": "cloudfront*",
   "mappings": {
     "logs": {
       "_source": {
