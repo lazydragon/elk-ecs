@@ -1,5 +1,5 @@
 {
-  "template": "logstash-*",
+  "template": "cloudfront-logs-*",
   "mappings": {
     "logs": {
       "_source": {
@@ -22,15 +22,15 @@
       ],
       "properties": {
         "geoip"  : {
-          "type" : "object",
           "dynamic": true,
           "properties" : {
             "ip": { "type": "ip" },
-            "location": { "type": "geo_point" }
+            "location" : { "type" : "geo_point" },
+            "latitude" : { "type" : "float" },
+            "longitude" : { "type" : "float" }
+          }
+        }
       }
     }
   }
 }
-}
-}
-
